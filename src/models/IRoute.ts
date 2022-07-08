@@ -2,5 +2,5 @@ import React from 'react';
 
 export interface IRoute {
 	path: string;
-	element: React.ComponentType;
+	element: React.ComponentType | React.ReactNode;
 }
