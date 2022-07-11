@@ -9,7 +9,7 @@ export const App:React.FC = () =>  {
 	// const user = useAppSelector((state) => state.user);
 
 	return (
-		<div>
+		<div className='app'>
 			<AppRoutes />
 		</div>
 	);
