@@ -1,4 +1,5 @@
 import React from 'react';
+import { AppRoutes } from './routes';
 
 // import { useAppDispatch, useAppSelector } from './hooks';
 // import { setUser } from './store/user-slice';
@@ -9,7 +10,7 @@ export const App:React.FC = () =>  {
 
 	return (
 		<div>
-			App component
+			<AppRoutes />
 		</div>
 	);
 }
