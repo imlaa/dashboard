@@ -39,7 +39,7 @@ export const SignIn:React.FC = () => {
 	}, [isConfirmPasswordVisible]);
 
 	const visibilityIcon = () => (
-		isConfirmPasswordVisible ? <VisibilityOffIcon /> : <VisibilityIcon />
+		isConfirmPasswordVisible ? <VisibilityOffIcon fontSize={"large"} /> : <VisibilityIcon fontSize={"large"} />
 	);
 
 	return (
@@ -63,11 +63,12 @@ export const SignIn:React.FC = () => {
 									label="Email"
 									autoFocus
 									type="email"
-									error={!!errors.email}
+									error={!!errors?.email}
 									helperText={errors?.email?.message}
 									variant="outlined"
 									required
 									fullWidth
+									margin='normal'
 								/>
 							)}
 						/>
@@ -81,11 +82,12 @@ export const SignIn:React.FC = () => {
 									className="mb-24"
 									label="Password (confirm)"
 									type={isConfirmPasswordVisible ? 'text' : 'password'}
-									error={!!errors.password}
+									error={!!errors?.password}
 									helperText={errors?.password?.message}
 									variant="outlined"
 									required
 									fullWidth
+									margin='normal'
 									InputProps={{
 										endAdornment: (
 											<IconButton
