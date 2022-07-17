@@ -9,7 +9,7 @@ import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 
 import { signInSchema } from '../../validation';
 
-import {Card, Input} from '../../components';
+import { Card } from '../../components';
 
 interface ISignInData {
 	email: string;
@@ -59,25 +59,6 @@ export const SignIn:React.FC = () => {
 						name="email"
 						control={control}
 						render={({ field }) => (
-							<Input
-								{...field}
-								label="Email"
-								autoFocus
-								type="email"
-								error={!!errors?.email}
-								helperText={errors?.email?.message}
-								variant="outlined"
-								required
-								fullWidth
-								margin='normal'
-							/>
-						)}
-					/>
-
-					<Controller
-						name="email"
-						control={control}
-						render={({ field }) => (
 							<TextField
 								{...field}
 								label="Email"
@@ -100,7 +81,7 @@ export const SignIn:React.FC = () => {
 							<TextField
 								{...field}
 								className="mb-24"
-								label="Password (confirm)"
+								label="Password"
 								type={isConfirmPasswordVisible ? 'text' : 'password'}
 								error={!!errors?.password}
 								helperText={errors?.password?.message}
@@ -122,6 +103,7 @@ export const SignIn:React.FC = () => {
 							/>
 						)}
 					/>
+
 					<button type={"submit"} onClick={() => console.log('a')}>submit</button>
 				</form>
 			</div>

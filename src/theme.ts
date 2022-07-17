@@ -1,11 +1,21 @@
-export const themeConfig = {
+import {createTheme} from "@mui/material";
+
+export const theme = createTheme({
 	components: {
-		MuiInputBase: {
+		MuiInputLabel: {
 			styleOverrides: {
-				input: {
-					color: 'white',
-				}
-			}
+				root: {
+					fontSize: '1.5rem',
+				},
+			},
+		},
+		MuiFormHelperText: {
+			styleOverrides: {
+				root: {
+					fontSize: '1.2rem',
+					margin: 0,
+				},
+			},
 		}
 	}
-};
+});

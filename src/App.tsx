@@ -3,7 +3,7 @@ import { ThemeProvider } from '@mui/material';
 
 import { AppRoutes } from './routes';
 
-import { themeConfig } from './theme';
+import { theme } from './theme';
 
 // import { useAppDispatch, useAppSelector } from './hooks';
 // import { setUser } from './store/user-slice';
@@ -13,7 +13,7 @@ export const App: React.FC = () => {
 	// const user = useAppSelector((state) => state.user);
 
 	return (
-		<ThemeProvider theme={themeConfig}>
+		<ThemeProvider theme={theme}>
 			<div className='app'>
 				<AppRoutes/>
 			</div>
